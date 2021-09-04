@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>University registration</title>
+	<link rel="stylesheet" type="text/css" href="19bce7451.css">
+	<script type="text/javascript">
+		function sendData(){
+			let name = document.getElementById('Name');
+			let email = document.getElementById('Email');
+			let phone = document.getElementById('Phone');
+			let program = document.getElementById('program');
+			let state = document.getElementById('state');
+			let city = document.getElementById('City');
+
+			let xmlhttp = new XMLHttpRequest();
+			xmlhttp.open('GET','19bce7451.php?name='+name+'&email='+email+'&phone='+phone+'&program='
+				+program+'&state='+state+'&city='+city,true);
+			xmlhttp.send();
+			xmlhttp.onreadystatechange = function(){
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+						console.log("Data send successfully");
+					}
+			}
+		}
+	</script>
+</head>
+<body>
+<div class="container">
+<div class = "brochureMsg">The brochure will be downloaded after submitting the form</div>
+
+	<div class = "formContainer">
+		<input type="text" id="Name" placeholder="Name" required><br>
+		<input type="email" id="Email" placeholder="E-mail Address" required><br>
+		<input type="text" id="Phone" placeholder="Phone Number" required><br>
+		<select name = "program" required id="program"> 
+			<option>B.tech/B.E</option>
+			<option>Bsc</option>
+			<option>M.tech/M.E</option>
+		</select><br>
+		<select name="states" required id="state">
+			<option>MP</option>
+			<option>Delhi</option>
+		</select><br>
+		<input type="text" id="City" placeholder="City" required><br>
+		<button onclick="sendData()">Submit</button>
+	</div>
+
+</div>
+</body>
+</html>

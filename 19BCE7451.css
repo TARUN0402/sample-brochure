@@ -1,0 +1,31 @@
+.brochureMsg{
+	padding:10px;
+	background:purple;
+	border-radius:5%;
+	color:white;
+	text-align:center;
+	margin:20px;
+}
+.formContainer{
+	padding:10px;
+	margin:20px;
+	border:1px solid black;
+	border-radius: 4%;
+
+}
+input,select,button{
+	padding:10px;
+	margin:10px;
+	width:90%;
+}
+select,button{
+	width:96%;
+}
+button{
+	background:rgba(0,255,0,0.8);
+	color:white;
+}
+.container{
+	padding:10px;
+	display:inline-block;
+}
